@@ -74,6 +74,25 @@ function zackbth_customizar_register($wp_customize){
     ),
   ));
 
+
+  
+  // Footer Option
+  $wp_customize->add_section('zackbth_footer_option', array(
+    'title' => __('Footer Option', 'zackbth'),
+    'description' => 'If you interested to change or update your footer settings you can do it.'
+  ));
+
+  $wp_customize->add_setting('zackbth_copyright_section', array(
+    'default' => '&copy; Copyright 2021 | Zakir Bd',
+  ));
+
+  $wp_customize-> add_control('zackbth_copyright_section', array(
+    'label' => 'Copyright Text',
+    'description' => 'If need you can update your copyright text from here',
+    'setting' => 'zackbth_copyright_section',
+    'section' => 'zackbth_footer_option',
+  ));
+
 }
 
 add_action('customize_register', 'zackbth_customizar_register');
