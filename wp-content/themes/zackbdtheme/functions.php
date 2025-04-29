@@ -26,6 +26,13 @@ function zackbth_css_js_file_calling(){
 add_action('wp_enqueue_scripts', 'zackbth_css_js_file_calling');
 
 
+// Google Fonts Enqueue
+function zackbth_add_google_fonts(){
+  wp_enqueue_style('zackbth_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald&display=swap', false);
+}
+add_action('wp_enqueue_scripts', 'zackbth_add_google_fonts');
+
+
 //Theme Function
 function zackbth_customizar_register($wp_customize){
   $wp_customize->add_section('zackbth_header_area', array(
@@ -47,3 +54,6 @@ function zackbth_customizar_register($wp_customize){
 }
 
 add_action('customize_register', 'zackbth_customizar_register');
+
+// Menu Register
+register_nav_menu( 'main_menu', __('Main Menu', 'zackbth') );
