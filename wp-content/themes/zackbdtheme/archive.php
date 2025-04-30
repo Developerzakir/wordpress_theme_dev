@@ -1,12 +1,11 @@
 <?php
 /*
-* This template for displaying the header
-*/
-
-get_header();
-?>
+* The main template file
+*/ 
+get_header(); ?>
 
 
+<h1>this is archive tamplate</h1>
   <section id="body_area">
     <div class="container">
       <div class="row">
@@ -16,6 +15,5 @@ get_header();
       </div>
     </div>
   </section>
-
 
   <?php get_footer(); ?>
