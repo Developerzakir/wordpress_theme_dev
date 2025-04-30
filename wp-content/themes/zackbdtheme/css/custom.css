@@ -581,3 +581,15 @@ input[type="submit"].submit:hover {
   width: 100%;
   margin: 0 0 15px;
 }
+
+
+/*===========================================
+  Slider Area Styling
+===========================================*/
+#slider_area{
+  margin: 25px 0;
+}
+#slider_area img{
+  width: 100%;
+  height: auto;
+}
