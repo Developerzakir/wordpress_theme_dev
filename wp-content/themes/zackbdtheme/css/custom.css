@@ -313,3 +313,13 @@ img {
 #copyright_area p a:hover {
   text-decoration: underline;
 }
+
+/*===========================================
+  Comment Area Styling
+===========================================*/
+#comments_area h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+}
