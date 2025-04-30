@@ -61,7 +61,42 @@ function zackbth_customizar_register($wp_customize){
       'setting' => 'zackbth_copyright_section',
       'section' => 'zackbth_footer_option',
     ));
+
+     // Theme Color
+    $wp_customize-> add_section('zackbth_colors', array(
+      'title' => __('Theme Color', 'zackbth'),
+      'description' => 'If need you can change your theme color.',
+    ));
+
+    $wp_customize ->add_setting('zackbth_bg_color', array(
+      'default' => '#ffffff',
+    ));
+    $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zackbth_bg_color', array(
+      'label' => 'Background Color',
+      'section' => 'zackbth_colors',
+      'settings' => 'zackbth_bg_color',
+    )));
+    $wp_customize ->add_setting('zackbth_primary_color', array(
+      'default' => '#ea1a70',
+    ));
+    $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zackbth_primary_color', array(
+      'label' => 'Primary Color',
+      'section' => 'zackbth_colors',
+      'settings' => 'zackbth_primary_color',
+    )));
   
   }
   
   add_action('customize_register', 'zackbth_customizar_register');
+
+
+  // theme color change
+  function zackbth_theme_color_cus(){
+    ?>
+    <style>
+      body{background: <?php echo get_theme_mod('zackbth_bg_color'); ?>}
+      :root{ --pink:<?php echo get_theme_mod('zackbth_primary_color'); ?>}
+    </style>
+    <?php 
+  }
+  add_action('wp_head', 'zackbth_theme_color_cus');

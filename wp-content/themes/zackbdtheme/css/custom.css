@@ -1,6 +1,11 @@
 /*=======================================
  Common CSS
 ========================================*/
+
+:root{
+  --pink:#ea1a70;
+}
+
 body {
   font-family: "Kaisei Decol", serif;
   font-size: 15px;
@@ -17,6 +22,22 @@ h6 {
 }
 img {
   max-width: 100%;
+}
+
+a.redmore,
+input[type="submit"].submit {
+  background: var(--pink);
+  border: 0px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 25px;
+  transition: 0.5s;
+}
+a.redmore:hover,
+input[type="submit"].submit:hover {
+  background: #262626;
 }
 
 /*=======================================
@@ -51,7 +72,7 @@ img {
   text-decoration: none;
 }
 #header_area .col-md-9 ul li a:hover {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
 }
 
@@ -81,7 +102,7 @@ img {
   color: #262626;
 }
 #header_area .col-md-9 ul li:hover a {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
 }
 #header_area .col-md-9 ul li:hover ul li a {
@@ -102,7 +123,7 @@ img {
   left: 200px;
 }
 #header_area .col-md-9 ul li ul li:hover a {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
 }
 #header_area .col-md-9 ul ul li:hover ul li a {
@@ -110,7 +131,7 @@ img {
   color: #fff;
 }
 #header_area .col-md-9 ul ul li ul li a:hover {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
 }
 
@@ -181,7 +202,7 @@ img {
   transition: 0.5s;
 }
 #body_area .post_details h2 a:hover {
-  color: #ea1a70;
+  color: var(--pink);
 }
 
 /*===========================================
@@ -196,7 +217,7 @@ img {
   font-size: 30px;
   margin-bottom: 0;
   line-height: 1em;
-  border-left: 5px solid #ea1a70;
+  border-left: 5px solid var(--pink);
   padding-left: 10px;
 }
 .child_sidebar input[type="search"] {
@@ -205,8 +226,8 @@ img {
   padding: 10px;
 }
 .child_sidebar button[type="submit"] {
-  background: #ea1a70;
-  border: 1px solid #ea1a70;
+  background: var(--pink);
+  border: 1px solid var(--pink);
   padding: 10px;
   margin: 0;
   color: #fff;
@@ -235,7 +256,7 @@ img {
   text-decoration: none;
 }
 .child_sidebar ul li a:hover {
-  color: #ea1a70;
+  color: var(--pink);
 }
 .child_sidebar a.tag-cloud-link {
   color: #fff;
@@ -247,7 +268,7 @@ img {
   margin-bottom: 5px;
 }
 .child_sidebar a.tag-cloud-link:hover {
-  background: #ea1a70;
+  background: var(--pink);
 }
 
 /*===========================================
@@ -256,7 +277,7 @@ img {
 #page_nav {
 }
 #page_nav p.pages {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   padding: 5px 10px;
 }
@@ -265,7 +286,7 @@ img {
   padding: 0 5px;
 }
 #page_nav .page-numbers {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   display: inline-block;
   text-decoration: none;
@@ -308,7 +329,7 @@ img {
   font-size: 15px;
 }
 #copyright_area p a {
-  color: #ea1a70;
+  color: var(--pink);
 }
 #copyright_area p a:hover {
   text-decoration: underline;
@@ -347,7 +368,7 @@ img {
   Archive Styling
 ===========================================*/
 #archive_title {
-  background: #ea1a70;
+  background: var(--pink);
   padding: 15px;
   margin-bottom: 20px;
 }
@@ -373,11 +394,11 @@ img {
   text-transform: uppercase;
 }
 .error_page p {
-  color: #ea1a70;
+  color: var(--pink);
   margin-bottom: 0;
 }
 .error_page a.homepage {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   margin-bottom: 0;
   text-decoration: none;
@@ -400,8 +421,8 @@ img {
   padding: 10px;
 }
 .error_search input[type="submit"] {
-  background: #ea1a70;
-  border: 1px solid #ea1a70;
+  background: var(--pink);
+  border: 1px solid var(--pink);
   padding: 10px;
   margin: 0;
   color: #fff;
