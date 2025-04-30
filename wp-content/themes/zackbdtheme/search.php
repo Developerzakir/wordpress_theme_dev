@@ -1,6 +1,6 @@
 <?php
 /*
-* The template for displaying Archive Pages
+* The template for displaying Search Result 
 */ 
 get_header(); ?>
 
@@ -9,14 +9,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-md-9">
             <div id="archive_title">
-                <?php
-                    the_archive_title('<h1 class="title">','</h1>');
-
-                    $author_description = get_the_author_meta('description');
-                    if ( $author_description ) {
-                        echo '<div class="description">' . esc_html( $author_description ) . '</div>';
-                    }
-                ?>
+              <h1 class="title"><?php printf(__('Search for result: %s', 'zackbth'), get_search_query()); ?></h1>
             </div>
 
             <?php get_template_part('template_part/blog_setup'); ?>
