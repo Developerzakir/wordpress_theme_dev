@@ -31,6 +31,13 @@ get_header();
               endif;
             ?>
 
+          <div id="page_nav">
+            <?php if ('ali_pagenav') {zackbth_pagenav(); } else{ ?>
+                <?php next_posts_link(); ?>
+                <?php previous_posts_link(); ?>
+            <?php } ?>
+          </div>
+
           
         </div>
         <div class="col-md-3">
