@@ -9,6 +9,7 @@ add_theme_support( 'post-thumbnails', array('page', 'post','service') );
 add_image_size('post-thumbnails', 970, 350, true);
 add_image_size('service', 390, 250, true);
 add_image_size('slider', 1920, 600, true);
+add_image_size('project', 390, 250, true);
 add_theme_support( 'threaded-comments' );
 
 

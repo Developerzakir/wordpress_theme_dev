@@ -84,6 +84,47 @@ function zackbth_customizar_register($wp_customize){
       'section' => 'zackbth_colors',
       'settings' => 'zackbth_primary_color',
     )));
+
+
+    //all project text dynamically change option create
+    $wp_customize->add_section('project_section', array(
+      'title'    => __('Project Page Settings', 'zackbth'),
+      'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('project_page_title', array(
+        'default'   => 'All Projects',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'project_page_title', array(
+        'label'    => __('Projects Page Title', 'zackbth'),
+        'section'  => 'project_section',
+        'settings' => 'project_page_title',
+        'type'     => 'text',
+    )));
+
+    //project post count dynamically change option
+    $wp_customize->add_section('project_settings_section', array(
+      'title'    => __('Project Post Count ', 'zackbth'),
+      'priority' => 31,
+    ));
+
+    $wp_customize->add_setting('project_posts_per_page', array(
+        'default'   => 3,
+        'sanitize_callback' => 'absint',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('project_posts_per_page', array(
+        'label'    => __('Number of Projects to Show', 'zackbth'),
+        'section'  => 'project_settings_section',
+        'type'     => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'step' => 1
+        )
+    ));
   
   }
   
