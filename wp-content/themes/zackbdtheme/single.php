@@ -11,7 +11,9 @@ get_header(); ?>
             <?php get_template_part('template_part/post_setup'); ?>
 
             <div id="comments_area">
-              <?php comments_template(); ?>
+              <?php if(comments_open() ) : ?>
+                <?php comments_template(); ?>
+              <?php endif; ?> 
             </div>
         </div>
         <div class="col-md-3">
