@@ -45,3 +45,11 @@ function zackbth_pagenav(){
         echo $pages . paginate_links($args);
         if ($max > 1 ) echo '</div><pre>';
   }
+
+//post format support
+  function zackbth_theme_setup(){
+    add_theme_support('post-thumbnails');
+    add_theme_support('post-formats', ['aside ', 'gallery ', 'image', 'audio', 'video', 'chat','quote']);
+  }
+  
+  add_action('after_setup_theme', 'zackbth_theme_setup');

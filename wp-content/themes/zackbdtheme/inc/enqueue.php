@@ -26,3 +26,9 @@ function zackbth_css_js_file_calling(){
     wp_enqueue_style('zackbth_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald&display=swap', false);
   }
   add_action('wp_enqueue_scripts', 'zackbth_add_google_fonts');
+
+// Desicon Not Showing fixing
+function deshicon_load_issue(){
+  wp_enqueue_style('dashicons');
+}
+add_action('wp_enqueue_scripts', 'deshicon_load_issue');
